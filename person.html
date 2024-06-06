@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о персоне</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script src="/tailwind.config.js"></script>
+    <link href="style/timeline.css" rel="stylesheet">
+</head>
+<body class="bg-bg-main bg-cover">
+
+<div class="bg-ornament-left bg-repeat-y ">
+
+    <nav class="flex flex-row justify-center">
+        <div class="flex flex-row mt-[1.5%]">
+            <div class="flex flex-row mr-[45%]">
+                <p class="text-4xl mr-[15%]">Главная</p>
+                <img src="/images/arrow-per.svg" class="w-[20%] mt-[-10%]" alt="">
+            </div>
+            <div class="flex flex-row mr-[25%]">
+                <p class="text-4xl mr-[15%]">История</p>
+                <img src="/images/arrow-per.svg" class="w-[20%] mt-[-10%]" alt="">
+            </div>
+            <div class="flex flex-row mr-[25%]">
+                <p class="text-4xl mr-[15%]">Личности</p>
+                <img src="/images/arrow-per.svg" class="w-[20%] mt-[-5%]" alt="">
+            </div>
+        </div>
+        <img src="/images/logo.svg" alt="" class="ml-[35%] size-[5%] pt-[1%]">
+    </nav>
+    <div class="flex space-x-4 justify-center mt-[3%]">
+        <input type="text" placeholder="Введите событие" class="w-[72%] border-2 border-black rounded-[10px] pl-14 pt-0.5 pb-0.5 h-[4%] bg-transparent">
+        <button class="px-[30px] border-2 border-black rounded-[15px]">Найти</button>
+    </div>
+        <div id="personDetails"></div>
+        <div id="personAbout" class="flex justify-center mt-[4%]"></div>
+        <div id="personAchiv" class="flex justify-center mt-[4%]"></div>
+        <div id="personEvents"></div>
+</div>
+<script src="script/person.js"></script>
+</body>
+</html>

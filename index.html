@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script src="/tailwind.config.js"></script>
+    <link href="style/timeline.css" rel="stylesheet">
+    <title>"Эщкереее"</title>
+
+</head>
+<body class=" bg-cover bg-bg-main  ">
+<div class="bg-ornament-left bg-repeat-y flex items-center flex-col h-screen item">
+    <div class="w-[90%]">
+        <main class="flex flex-row">
+            <h1 class="text-4xl mt-[6%] ml-[12%] mr-14 font-bold">Погрузитесь в историю Коми Научного Центра</h1>
+            <img src="./images/logo.svg" alt="Коми Научный Центр" class="mt-[1%]">
+        </main>
+        <div class="flex items-center flex-col">
+            <div>
+                <img src="./images/history.png" alt="История" class="mt-[-1%] ml-[-4%]">
+            </div>
+            <div class="text-[24px] ml-[13%] mt-[7%]">
+                <div class="w-[70%]">
+                    ФГБУН Федеральный исследовательский центр
+                    «Коми научный центр Уральского отделения Российской академии наук»
+                    — научный центр Российской академии наук находящийся в городе Сыктывкаре
+                </div>
+                <div class="arrow ml-[88%] mt-[-10%] pb-5" >
+                    <a href="#search">
+                        <img src="./images/arrow.svg" alt="Стрелка" class="arrow">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-ornament-top bg-repeat-x flex items-center flex-col h-screen item" id="search">
+    <div class="w-[1280px] h-full">
+        <div class="flex space-x-4 justify-center mt-[10%] spacex-4">
+            <input type="text" placeholder="Введите событие" class="w-[828px] border border-2 border-black rounded-[10px] pl-14 pt-0.5 pb-0.5  bg-none">
+            <button class="px-[30px] border-2 border-black rounded-[15px]">Найти</button>
+            <button class="text-white bg-blue-950 rounded-[15px] px-[30px]">Фильтр</button>
+        </div>
+        <div class="wrapper mt-[42px] ml-16  border-none ">
+            <div class="year-input">
+                <div class="field">
+                    <input type="number" class="input-min border-none" id="input-min" value="1964" >
+                </div>
+                <div class="field">
+                    <input type="number" class="input-max border-none" id="input-max" value="2024">
+                </div>
+            </div>
+            <div class="">
+                <div class="slider">
+                    <div class="progress"></div>
+                </div>
+                <div class="range-input">
+                    <input type="range" id="range-min" class="range-min range-left" min="1924" max="2024" value="1924" step="1">
+                    <input type="range" id="range-max" class="range-max range-rig" min="1924" max="2024" value="2024" step="1">
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row">
+<!--            <div class="flex w-[60%] h-[12%] ml-[7%] bg-[#D9D9D9] bg-opacity-30 rounded-[15px] p-[1%] mr-[2%] ">-->
+<!--                <img src="/images/no-photo.svg" alt="" class="preview-image rounded-[15px]">-->
+<!--                <div class="flex flex-col pl-[2.5%]">-->
+<!--                    <h1>Создан Коми научно-исследовательский институт</h1>-->
+<!--                    <p class="mt-[10%]">Апрель 1934</p>-->
+<!--                </div>-->
+<!--                <img src="/images/about.svg" alt="" class="w-[16%] mt-[6%]">-->
+<!--            </div>-->
+            <div id="eventsContainer" class="flex flex-col"></div>
+            <div class="flex items-center bg-[#D9D9D9] mr-[5%] ml-[-4%] bg-opacity-30 rounded-[15px] flex-col">
+                <h1 class="my-2">Выбранные фильтры</h1>
+                <div class="flex flex-row  flex-wrap ">
+                    <div class="flex flex-row border border-solid border-2 border-[#0038A8] border-opacity-20 px-2 py-1 rounded-[10px] ml-5 mb-5">
+                        <h1 class="mr-[5%]">История</h1>
+                        <img src="images/delete.svg" alt="" class="pr-[5%]">
+                    </div>
+                    <div class="flex flex-row border border-solid border-2 border-[#0038A8] border-opacity-20 px-2 py-1 rounded-[10px] ml-5 mb-5">
+                        <h1 class="mr-[5%]">Сигма</h1>
+                        <img src="images/delete.svg" alt="" class="pr-[5%]">
+                    </div>
+                    <div class="flex flex-row border border-solid border-2 border-[#0038A8] border-opacity-20 px-2 py-1 rounded-[10px] ml-5 mb-5">
+                        <h1 class="mr-[5%]">Геология</h1>
+                        <img src="images/delete.svg" alt="" class="pr-[5%]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/script/range.js"></script>
+<script src="/script/main.js"></script>
+</body>
+</html>
